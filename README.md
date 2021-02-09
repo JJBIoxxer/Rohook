@@ -38,7 +38,7 @@ Embed.setField("Name", "Value", true);
 
 #### .addFields(...fields)
 
-> Adds fields to embed (max 25).
+> Adds fields to the embed (max 25).
 >
 > | Parameter | Type                                          | Description       |
 > | :-------: | :-------------------------------------------: | :---------------: |
@@ -172,11 +172,25 @@ local Message = Discord.Message();
 
 > Adds an embed to the message (max 10).
 >
-> | Parameter | Type            |
-> | :-------: | :-------------: |
-> | embed     | [Embed](#embed) |
+> | Parameter | Type            | Description          |
+> | :-------: | :-------------: | :------------------: |
+> | embed     | [Embed](#embed) | The embedded message |
 
+```lua
+Message.addEmbed(Embed);
+```
 
+#### .addEmbeds(...embeds)
+
+> Adds embeds to the message (max 10).
+>
+> | Parameter | Type               | Description          |
+> | :-------: | :-------------000: | :------------------: |
+> | embeds    | ...[Embed](#embed) | The embedded message |
+
+```lua
+Message.addEmbeds(Embed, Embed);
+```
 
 
 
