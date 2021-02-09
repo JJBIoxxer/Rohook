@@ -28,12 +28,27 @@ local Embed = Discord.Embed();
 
 Adds a field to the embed (max 25).
 
-| Parameter | Type    | Optional | Default |
-| :-------: | :-----: | :------: | :-----: |
-| name      | String  |          |         |
-| value     | String  |          |         |
-| inline    | Boolean | ✓        | false   |
+| Parameter | Type    | Optional | Default | Description                            |
+| :-------: | :-----: | :------: | :-----: | :------------------------------------: |
+| name      | String  |          |         | The name of the field                  |
+| value     | String  |          |         | The value of the field                 |
+| inline    | Boolean | ✓        | false   | If this field will be displayed inline |
 
 ```lua
 Embed.setField("Name", "Value", true);
+```
+
+#### .addFields(...fields)
+
+Adds fields to embed (max 25).
+
+| Parameter | Type     | Description       |
+| :-------: | :------: | :---------------: |
+| fields    | ...Array | The fields to add |
+
+```lua
+Embed.addFields(
+  {"Name", "Value"},
+  {"Name", "Value", true}
+);
 ```
