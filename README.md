@@ -28,11 +28,11 @@ local Embed = Discord.Embed();
 
 > Adds a field to the embed (max 25).
 > 
-> | Parameter | Type         | Optional | Default | Description                            |
-> | :-------: | :----------: | :------: | :-----: | :------------------------------------: |
-> | name      | [string][1]  |          |         | The name of the field                  |
-> | value     | [string][1]  |          |         | The value of the field                 |
-> | inline    | [boolean][3] | ✓        | false   | If this field will be displayed inline |
+> | Parameter | Type                                        | Optional | Default | Description                            |
+> | :-------: | :-----------------------------------------: | :------: | :-----: | :------------------------------------: |
+> | name      | [string](https://www.lua.org/pil/2.4.html)  |          |         | The name of the field                  |
+> | value     | [string](https://www.lua.org/pil/2.4.html)  |          |         | The value of the field                 |
+> | inline    | [boolean](https://www.lua.org/pil/2.2.html) | ✓        | false   | If this field will be displayed inline |
 
 ```lua
 Embed.setField("Name", "Value", true);
@@ -42,9 +42,9 @@ Embed.setField("Name", "Value", true);
 
 > Adds fields to embed (max 25).
 >
-> | Parameter | Type          | Description       |
-> | :-------: | :-----------: | :---------------: |
-> | fields    | ...[array][4] | The fields to add |
+> | Parameter | Type                                          | Description       |
+> | :-------: | :-------------------------------------------: | :---------------: |
+> | fields    | ...[array](https://www.lua.org/pil/11.1.html) | The fields to add |
 
 ```lua
 Embed.addFields(
@@ -57,11 +57,11 @@ Embed.addFields(
 
 > Sets the author of this embed.
 >
-> | Parameter | Type        | Optional | Default | Description                |
-> | :-------: | :---------: | :------: | :-----: | :------------------------: |
-> | name      | [string][1] |          |         | The name of the author     |
-> | iconURL   | [string][1] | ✓        | nil     | The icon URL of the author |
-> | url       | [string][1] | ✓        | nil     | The URL of the author      |
+> | Parameter | Type                                       | Optional | Default | Description                |
+> | :-------: | :----------------------------------------: | :------: | :-----: | :------------------------: |
+> | name      | [string](https://www.lua.org/pil/2.4.html) |          |         | The name of the author     |
+> | iconURL   | [string](https://www.lua.org/pil/2.4.html) | ✓        | nil     | The icon URL of the author |
+> | url       | [string](https://www.lua.org/pil/2.4.html) | ✓        | nil     | The URL of the author      |
 
 ```lua
 Embed.setAuthor("Name", "https://i.imgur.com/iXcBOJ5.png", "https://developer.roblox.com/");
@@ -71,9 +71,9 @@ Embed.setAuthor("Name", "https://i.imgur.com/iXcBOJ5.png", "https://developer.ro
 
 > Sets the author of this embed.
 >
-> | Parameter | Type                                      | Description                |
-> | :-------: | :---------------------------------------: | :------------------------: |
-> | color     | [string][1] or [number][2] or [Color3][5] | The color of the embed     |
+> | Parameter | Type                                                                                                                                                                   | Description                |
+> | :-------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------: |
+> | color     | [string](https://www.lua.org/pil/2.4.html) or [number](https://www.lua.org/pil/2.3.html) or [Color3](https://developer.roblox.com/en-us/api-reference/datatype/Color3) | The color of the embed     |
 
 ```lua
 Embed.setColor("0xffc83c");
@@ -81,9 +81,10 @@ Embed.setColor("0xffc83c");
 
 
 
-<!--- Link References -->
-[1]: https://www.lua.org/pil/2.4.html <!--- String -->
-[2]: https://www.lua.org/pil/2.3.html <!--- Number -->
-[3]: https://www.lua.org/pil/2.2.html <!--- Boolean -->
-[4]: https://www.lua.org/pil/11.1.html <!--- Array -->
-[5]: https://developer.roblox.com/en-us/api-reference/datatype/Color3 <!--- Color3 -->
+<!--- Links
+[string]: https://www.lua.org/pil/2.4.html
+[number]: https://www.lua.org/pil/2.3.html
+[boolean]: https://www.lua.org/pil/2.2.html
+[array]: https://www.lua.org/pil/11.1.html
+[Color3]: https://developer.roblox.com/en-us/api-reference/datatype/Color3
+-->
