@@ -172,9 +172,9 @@ local Message = Discord.Message();
 
 > Adds an embed to the message (max 10).
 >
-> | Parameter | Type            | Description          |
-> | :-------: | :-------------: | :------------------: |
-> | embed     | [Embed](#embed) | The embedded message |
+> | Parameter | Type            | Description                 |
+> | :-------: | :-------------: | :-------------------------: |
+> | embed     | [Embed](#embed) | The embedded message to add |
 
 ```lua
 Message.addEmbed(Embed);
@@ -184,12 +184,24 @@ Message.addEmbed(Embed);
 
 > Adds embeds to the message (max 10).
 >
-> | Parameter | Type               | Description          |
-> | :-------: | :----------------: | :------------------: |
-> | embeds    | ...[Embed](#embed) | The embedded message |
+> | Parameter | Type               | Description                  |
+> | :-------: | :----------------: | :--------------------------: |
+> | embeds    | ...[Embed](#embed) | The embedded messages to add |
 
 ```lua
 Message.addEmbeds(Embed, Embed);
+```
+
+#### .setAvatarURL(url)
+
+> Sets the avatar of the bot.
+>
+> | Parameter | Type                                       | Description          |
+> | :-------: | :----------------------------------------: | :------------------: |
+> | url       | [string](https://www.lua.org/pil/2.4.html) | The URL of the image |
+
+```lua
+Message.setAvatarURL("https://i.imgur.com/iXcBOJ5.png");
 ```
 
 
