@@ -158,7 +158,23 @@ Embed.setTitle("Title");
 Embed.setURL("https://developer.roblox.com/");
 ```
 
+<div>&nbsp;</div>
 
+### Message
+
+Use the message constructor to create and customize a new Discord message.
+
+```lua
+local Message = Discord.Message();
+```
+
+#### .addEmbed(embed)
+
+> Adds an embed to the message (max 10).
+>
+> | Parameter | Type            |
+> | :-------: | :-------------: |
+> | embed     | [Embed](Embed) |
 
 
 
