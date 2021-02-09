@@ -77,12 +77,64 @@ Embed.setAuthor("Name", "https://i.imgur.com/iXcBOJ5.png", "https://developer.ro
 Embed.setColor("0xffc83c");
 ```
 
+#### .setDescription(description)
+
+> Sets the description of this embed.
+>
+> | Parameter   | Type                                       | Description     |
+> | :---------: | :----------------------------------------: | :-------------: |
+> | description | [string](https://www.lua.org/pil/2.4.html) | The description |
+
+```lua
+Embed.setDescription("Description");
+```
+
+#### .setFooter(text, [iconURL])
+
+> Sets the footer of this embed.
+>
+> | Parameter   | Type                                       | Optional | Default | Description                |
+> | :---------: | :----------------------------------------: | :------: | :-----: | :------------------------: |
+> | text        | [string](https://www.lua.org/pil/2.4.html) |          |         | The text of the footer     |
+> | iconURL     | [string](https://www.lua.org/pil/2.4.html) | ✓        | nil     | The icon URL of the footer |
+
+```lua
+Embed.setFooter("Text", "https://i.imgur.com/iXcBOJ5.png");
+```
+
+#### .setImage(url)
+
+> Sets the image of the embed.
+>
+> | Parameter | Type                                       | Description          |
+> | :-------: | :----------------------------------------: | :------------------: |
+> | url       | [string](https://www.lua.org/pil/2.4.html) | The URL of the image |
+
+```lua
+Embed.setImage("https://i.imgur.com/iXcBOJ5.png");
+```
+
+#### .setThumbnail(url)
+
+> Sets the thumbnail of the embed.
+>
+> | Parameter | Type                                       | Description          |
+> | :-------: | :----------------------------------------: | :------------------: |
+> | url       | [string](https://www.lua.org/pil/2.4.html) | The URL of the image | 
+
+```lua
+Embed.setThumbnail("https://i.imgur.com/iXcBOJ5.png");
+```
+
+#### .setTimestamp()
+
+> Sets the timestamp of the embed.
+
+```lua
+Embed.setTimestamp();
+```
 
 
-<!--- Links
-[string]: https://www.lua.org/pil/2.4.html
-[number]: https://www.lua.org/pil/2.3.html
-[boolean]: https://www.lua.org/pil/2.2.html
-[array]: https://www.lua.org/pil/11.1.html
-[Color3]: https://developer.roblox.com/en-us/api-reference/datatype/Color3
--->
+
+
+
