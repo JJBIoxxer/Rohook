@@ -8,3 +8,7 @@ All of the available classes are listed in this section.
 ```lua
 local Embed = Discord.Embed();
 ```
+##### .addField(name, value, [inline])
+| Parameter | Type | Optional | Default | Description |
+_______________________________________________________
+| Yes       |      |          |         |             |
