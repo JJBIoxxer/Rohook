@@ -204,6 +204,30 @@ Message.addEmbeds(Embed, Embed);
 Message.setAvatarURL("https://i.imgur.com/iXcBOJ5.png");
 ```
 
+#### .setContent(content)
+
+> Sets the content of the message.
+>
+> | Parameter | Type                                       | Description                |
+> | :-------: | :----------------------------------------: | :------------------------: |
+> | content   | [string](https://www.lua.org/pil/2.4.html) | The content of the message |
+
+```lua
+Message.setContent("Content");
+```
+
+#### .setUsername(username)
+
+> Sets the username of the bot.
+>
+> | Parameter | Type                                       | Description             |
+> | :-------: | :----------------------------------------: | :---------------------: |
+> | username  | [string](https://www.lua.org/pil/2.4.html) | The username of the bot |
+
+```lua
+Message.setUsername("Username");
+```
+
 
 
 
