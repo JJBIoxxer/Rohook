@@ -1,8 +1,6 @@
-<h1 align="center">Roblox Discord API</h1>
+# Roblox Discord API
 
-<div align="center">
-  An easy way to create and send messages through Discord webhooks on Roblox.
-</div>
+An easy way to create and send messages through Discord webhooks on Roblox.
 
 <div>&nbsp;</div>
 
