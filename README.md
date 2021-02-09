@@ -185,7 +185,7 @@ Message.addEmbed(Embed);
 > Adds embeds to the message (max 10).
 >
 > | Parameter | Type               | Description          |
-> | :-------: | :-------------000: | :------------------: |
+> | :-------: | :----------------: | :------------------: |
 > | embeds    | ...[Embed](#embed) | The embedded message |
 
 ```lua
