@@ -228,6 +228,28 @@ Message.setContent("Content");
 Message.setUsername("Username");
 ```
 
+<div>&nbsp;</div>
+
+### Webhook
+
+Use the webhook constructor to create new Discord webhook.
+
+```lua
+local Webhook = Discord.Webhook("Webhook URL");
+```
+
+#### .send(message)
+
+> Sends the message to the Discord channel linked to the webhook.
+>
+> | Parameter | Type                | Description         |
+> | :-------: | :-----------------: | :-----------------: |
+> | message   | [Message](#message) | The message to send |
+
+```lua
+Webhook.send(Message);
+```
+
 
 
 
