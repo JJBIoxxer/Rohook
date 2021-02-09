@@ -134,6 +134,51 @@ Embed.setThumbnail("https://i.imgur.com/iXcBOJ5.png");
 Embed.setTimestamp();
 ```
 
+#### .setTitle(title)
+
+> Sets the title of the embed.
+>
+> | Parameter | Type                                       | Description |
+> | :-------: | :----------------------------------------: | :---------: |
+> | title     | [string](https://www.lua.org/pil/2.4.html) | The title   |
+
+```lua
+Embed.setTitle("Title");
+```
+
+#### .setURL(url)
+
+> Sets the title of the embed.
+>
+> | Parameter | Type                                       | Description |
+> | :-------: | :----------------------------------------: | :---------: |
+> | url       | [string](https://www.lua.org/pil/2.4.html) | The URL     |
+
+```lua
+Embed.setURL("https://developer.roblox.com/");
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
