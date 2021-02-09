@@ -174,7 +174,7 @@ local Message = Discord.Message();
 >
 > | Parameter | Type            |
 > | :-------: | :-------------: |
-> | embed     | [Embed](Embed) |
+> | embed     | [Embed](#embed) |
 
 
 
