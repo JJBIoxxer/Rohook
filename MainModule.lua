@@ -237,5 +237,5 @@ function Discord.Embed()
 	return Embed;
 end
 
--- Return
+-- Return Module
 return Discord;
