@@ -115,7 +115,7 @@ function Discord.Embed()
 		if (typeof(color) == "Color3") then
 			color = ("0x" .. toHex{color.R, color.G, color.B});
 		end
-		print(color)
+		
 		Data.color = tostring(tonumber(color));
 	end
 
