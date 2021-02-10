@@ -67,7 +67,7 @@ Embed.setAuthor("Name", "https://i.imgur.com/iXcBOJ5.png", "https://developer.ro
 
 #### .setColor(color)
 
-> Sets the author of this embed.
+> Sets the color of this embed.
 >
 > | Parameter | Type                                                                                                                                                                   | Description                |
 > | :-------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------: |
