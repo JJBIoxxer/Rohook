@@ -1,3 +1,10 @@
+--[[
+	[Name]: Discord API Module
+	[Author]: JJBIoxxer
+	[Created]: 02/08/2021
+	[Last Updated]: 02/09/2021
+--]]
+
 -- Services
 local HttpService = game:GetService("HttpService");
 
@@ -237,5 +244,5 @@ function Discord.Embed()
 	return Embed;
 end
 
--- Return Module
+-- Return
 return Discord;
