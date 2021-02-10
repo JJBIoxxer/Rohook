@@ -1,19 +1,19 @@
 --[[
-	This module was made to help make creating and sending messages using Discord webhooks easier.
-	
-	[Version]: V0.1.0.BETA
-	
-	[Author]: https://www.roblox.com/users/243014315/profile
-	
-	[Created]: Monday, February 8th, 2021 @ 2:39 PM (Pacific Standard Time)
-	[Updated]: Wednesday, February 10th, 2021 @ 3:00 AM (Pacific Standard Time)
-	
-	[Documentation]: https://github.com/JJBIoxxer/Roblox-Discord-API
-	[Tutorial]: https://www.youtube.com/watch?v=9hJuv3kwYQk&ab_channel=Chaos
-	
-	If you have any questions, suggestions, or bug reports, feel free to send me a message on Roblox and I'll get back to you as soon as possible.
-	
-	Happy scripting!
+This module was made to help make creating and sending messages using Discord webhooks easier.
+
+[Version]: V0.1.0.BETA
+
+[Author]: https://www.roblox.com/users/243014315/profile
+
+[Created]: Monday, February 8th, 2021 @ 2:39 PM (Pacific Standard Time)
+[Updated]: Wednesday, February 10th, 2021 @ 3:00 AM (Pacific Standard Time)
+
+[Documentation]: https://github.com/JJBIoxxer/Roblox-Discord-API
+[Tutorial]: https://www.youtube.com/watch?v=9hJuv3kwYQk&ab_channel=Chaos
+
+If you have any questions, suggestions, or bug reports, feel free to send me a message on Roblox and I'll get back to you as soon as possible.
+
+Happy scripting!
 --]]
 
 -- Services
@@ -29,16 +29,16 @@ local Discord = {};
 local function toHex(color3)
 	assert(color3, "The parameter 'color3' is required.");
 	assert(type(color3) == "table", "The parameter 'color3' must be a table value.");
-	
+
 	local hexidecimal = {};
-	
+
 	for _, integer in ipairs(color3) do
 		local base = math.floor((integer * 255) / 16);
 		local remainder = ((integer * 255) - (base * 16));
-		
+
 		table.insert(hexidecimal, string.format("%x%x", base, remainder));
 	end
-	
+
 	return table.concat(hexidecimal, "");
 end
 
@@ -46,114 +46,114 @@ end
 function Discord.Embed()
 	local Embed = {};
 	Embed.Data = {};
-	
+
 	local Data = Embed.Data;
-	
+
 	function Embed.addField(name, value, inline)
 		if not (Data.fields) then
 			Data.fields = {};
 		end
-		
+
 		local Field = {};
-		
+
 		assert(name, "The parameter 'name' is required.");
 		assert(value, "The parameter 'value' is required.");
 		assert(type(name) == "string", "The parameter 'name' must be a string value.");
 		assert(type(value) == "string", "The parameter 'value' must be a string value.");
 		assert(string.len(name) <= 256, "The parameter 'name' cannot exceed 256 characters.");
 		assert(string.len(value) <= 1024, "The parameter 'value' cannot exceed 1024 characters.");
-		
+
 		if (inline) then
 			assert(type(inline) == "boolean", "The parameter 'inline' must be a boolean value.");
 			Field.inline = inline;
 		end
-		
+
 		Field.name = tostring(name);
 		Field.value = tostring(value);
-		
+
 		table.insert(Data.fields, Field);
 	end
-	
+
 	function Embed.addFields(...)
 		local Fields = {...};
-		
+
 		assert(#Fields >= 1, "The parameter 'fields' is required.");
 		assert(#Fields <= 25, "The parameter 'fields' cannot exceed 25 objects.");
-		
+
 		for _, Field in next, Fields do
 			assert(type(Field) == "table", "The parameter 'field' must be a table value.");
 			Embed.addField(unpack(Field));
 		end
 	end
-	
+
 	function Embed.setAuthor(name, iconURL, url)
 		local Author = {};
-		
+
 		assert(name, "The parameter 'name' is required.");
 		assert(type(name) == "string", "The parameter 'name' must be a string value.");
 		assert(string.len(name) <= 256, "The parameter 'name' cannot exceed 256 characters.");
-		
+
 		if (iconURL) then
 			assert(string.match(iconURL, Protocol), "The parameter 'iconURL' must be a valid URL.");
 			Author.icon_url = tostring(iconURL);
 		end
-		
+
 		if (url) then
 			assert(string.match(url, Protocol), "The parameter 'url' must be a valid URL.");
 			Author.url = tostring(url);
 		end
-		
+
 		Author.name = tostring(name);
-		
+
 		Data.author = Author;
 	end
-	
+
 	function Embed.setColor(color)
 		assert(color, "The parameter 'color' is required.");
 		assert(type(color) == "string" or type(color) == "number" or typeof(color) == "Color3", "The parameter 'color' must be a string, number, or Color3 value.");
-		
+
 		if (typeof(color) == "Color3") then
 			color = ("0x" .. toHex{color.R, color.G, color.B});
 		end
 		print(color)
 		Data.color = tostring(tonumber(color));
 	end
-	
+
 	function Embed.setDescription(description)
 		assert(description, "The parameter 'description' is required.");
 		assert(type(description) == "string", "The parameter 'description' must be a string value.");
 		assert(string.len(description) <= 2048, "The parameter 'description' cannot exceed 2048 characters.");
-		
+
 		Data.description = tostring(description);
 	end
-	
+
 	function Embed.setFooter(text, iconURL)
 		local Footer = {};
-		
+
 		assert(text, "The parameter 'text' is required.");
 		assert(type(text) == "string", "The parameter 'text' must be a string value.");
 		assert(string.len(text) <= 2048, "The parameter 'text' cannot exceed 2048 characters.");
-		
+
 		if (iconURL) then
 			assert(string.match(iconURL, Protocol), "The parameter 'iconURL' must be a valid URL.");
 			Footer.icon_url = tostring(iconURL);
 		end
-		
+
 		Footer.text = tostring(text);
-		
+
 		Data.footer = Footer;
 	end
-	
+
 	function Embed.setImage(url)
 		assert(url, "The parameter 'url' is required.");
 		assert(type(url) == "string", "The parameter 'url' must be a string value.");
 		assert(string.match(url, Protocol), "The parameter 'url' must be a valid URL.");
-		
+
 		Data.image = {
 			["url"] = tostring(url);
 		};
 	end
-	
+
 	function Embed.setThumbnail(url)
 		assert(url, "The parameter 'url' is required.");
 		assert(type(url) == "string", "The parameter 'url' must be a string value.");
@@ -163,27 +163,27 @@ function Discord.Embed()
 			["url"] = tostring(url);
 		};
 	end
-	
+
 	function Embed.setTimestamp()
 		Data.timestamp = os.date("%Y-%m-%dT%H:%M:%SZ", os.time());
 	end
-	
+
 	function Embed.setTitle(title)
 		assert(title, "The parameter 'title' is required.");
 		assert(type(title) == "string", "The parameter 'title' must be a string value.");
 		assert(string.len(title) <= 256, "The parameter 'title' cannot exceed 256 characters.");
-		
+
 		Data.title = tostring(title);
 	end
-	
+
 	function Embed.setURL(url)
 		assert(url, "The parameter 'url' is required.");
 		assert(type(url) == "string", "The parameter 'url' must be a string value.");
 		assert(string.match(url, Protocol), "The parameter 'url' must be a valid URL.");
-		
+
 		Data.url = tostring(url);
 	end
-	
+
 	return Embed;
 end
 
