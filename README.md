@@ -148,7 +148,7 @@ Embed.setTitle("Title");
 
 #### .setURL(url)
 
-> Sets the title of the embed.
+> Sets the URL of the embed.
 >
 > | Parameter | Type                                       | Description |
 > | :-------: | :----------------------------------------: | :---------: |
