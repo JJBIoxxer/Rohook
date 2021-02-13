@@ -6,7 +6,7 @@
 	[Author]: https://www.roblox.com/users/243014315/profile
 	
 	[Created]: Monday, February 8th, 2021 @ 2:39 PM (Pacific Standard Time)
-	[Updated]: Saturday, February 13th, 2021 @ 9:41 AM (Pacific Standard Time)
+	[Updated]: Saturday, February 13th, 2021 @ 9:48 AM (Pacific Standard Time)
 	
 	[Documentation]: https://github.com/JJBIoxxer/Roblox-Discord-API
 	[Tutorial]: https://www.youtube.com/watch?v=9hJuv3kwYQk&ab_channel=Chaos
