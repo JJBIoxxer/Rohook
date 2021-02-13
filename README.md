@@ -196,7 +196,7 @@ Message.addEmbed(Embed);
 Message.addEmbeds(Embed, Embed);
 ```
 
-#### .setAvatarURL(url)
+#### .setAvatar(url)
 
 > Sets the avatar of the bot.
 >
@@ -205,7 +205,7 @@ Message.addEmbeds(Embed, Embed);
 > | url       | [string](https://www.lua.org/pil/2.4.html) | The URL of the image |
 
 ```lua
-Message.setAvatarURL("https://i.imgur.com/iXcBOJ5.png");
+Message.setAvatar("https://i.imgur.com/iXcBOJ5.png");
 ```
 
 #### .setContent(content)
