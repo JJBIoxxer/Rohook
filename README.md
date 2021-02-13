@@ -1,4 +1,4 @@
-# Roblox Discord API
+# Rohook
 
 An easy way to create and send messages through Discord webhooks on Roblox.
 
@@ -6,10 +6,10 @@ An easy way to create and send messages through Discord webhooks on Roblox.
 
 ## Documentation
 
-To start using, copy the AssetID of the official [model](https://www.roblox.com/library/6368393169/MainModule) and require the module.
+To start using, copy the AssetID of the official [model](https://www.roblox.com/library/6368393169/Rohook) and require the module.
 
 ```lua
-local Discord = require(6368393169);
+local Rohook = require(6368393169);
 ```
 
 <div>&nbsp;</div>
@@ -19,7 +19,7 @@ local Discord = require(6368393169);
 Use the embed constructor to create and customize a new Discord embedded message.
 
 ```lua
-local Embed = Discord.Embed();
+local Embed = Rohook.Embed();
 ```
 
 #### .addField(name, value, [inline])
@@ -169,7 +169,7 @@ Embed.setURL("https://developer.roblox.com/");
 Use the message constructor to create and customize a new Discord message.
 
 ```lua
-local Message = Discord.Message();
+local Message = Rohook.Message();
 ```
 
 #### .addEmbed(embed)
@@ -239,7 +239,7 @@ Message.setUsername("Username");
 Use the webhook constructor to create new Discord webhook.
 
 ```lua
-local Webhook = Discord.Webhook("Webhook URL");
+local Webhook = Rohook.Webhook("Webhook URL");
 ```
 
 #### .send(message)
@@ -253,25 +253,3 @@ local Webhook = Discord.Webhook("Webhook URL");
 ```lua
 Webhook.send(Message);
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
