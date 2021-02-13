@@ -126,7 +126,7 @@ Embed.setImage("https://i.imgur.com/iXcBOJ5.png");
 Embed.setThumbnail("https://i.imgur.com/iXcBOJ5.png");
 ```
 
-#### .setTimestamp()
+#### .setTimestamp([timestamp])
 
 > Sets the timestamp of the embed.
 >
