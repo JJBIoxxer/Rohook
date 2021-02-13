@@ -30,7 +30,6 @@ local Discord = {};
 
 -- Utilities
 local Utilities = {};
-Utilities.Http = {};
 
 function Utilities.toHex(color)
 	assert(color, "Parameter 'color' is required.");
