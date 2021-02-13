@@ -129,6 +129,10 @@ Embed.setThumbnail("https://i.imgur.com/iXcBOJ5.png");
 #### .setTimestamp()
 
 > Sets the timestamp of the embed.
+>
+> | Parameter | Type                                       | Optional | Default                                        | Description   |
+> | :-------: | :----------------------------------------: | :------: | :--------------------------------------------: | :-----------: |
+> | timestamp | [number](https://www.lua.org/pil/2.3.html) | ✓        | [os.time()](https://www.lua.org/pil/22.1.html) | The timestamp |
 
 ```lua
 Embed.setTimestamp();
