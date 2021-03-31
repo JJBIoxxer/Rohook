@@ -1,0 +1,1 @@
+return function(word, number) return string.format("%s%s", word, (number ~= 1 and "s" or "")) end
