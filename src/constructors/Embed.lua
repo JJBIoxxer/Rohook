@@ -46,7 +46,7 @@ function Embed.new(data)
 		
 		for _, field in next, fields do
 			_ScanParam({"field", field}, {"table"}, false, true)
-			self.addField(field)
+			self.addField(field.name, field.value, field.inline)
 		end
 
 		return self
@@ -76,10 +76,14 @@ function Embed.new(data)
 		
 		if (_TypeOf(color) == "Color3") then
 			local R, G, B = color.R, color.G, color.B
-			color = _ToHex(R / 255, G / 255, B / 255)
+			color = _ToHex(R * 255, G * 255, B * 255)
 		end
 		
-		self.color = color
+		if (_TypeOf(color) == "string" and string.sub(color, 1, 1) == "#") then
+			color = string.gsub(color, "#", "0x")
+		end
+		
+		self.rawdata.color = tonumber(color)
 		
 		return self
 	end
