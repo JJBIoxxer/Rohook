@@ -33,7 +33,7 @@ local Embed = Rohook.Embed();
 > | inline    | [boolean](https://www.lua.org/pil/2.2.html) | ✓        | false   | If this field will be displayed inline |
 
 ```lua
-Embed.setField("Name", "Value", true);
+Embed.addField("Name", "Value", true);
 ```
 
 #### .addFields(...fields)
@@ -46,8 +46,8 @@ Embed.setField("Name", "Value", true);
 
 ```lua
 Embed.addFields(
-  {"Name", "Value"},
-  {"Name", "Value", true}
+  {name = "Name", value = "Value"},
+  {name = "Name", value = "Value", inline = true}
 );
 ```
 
